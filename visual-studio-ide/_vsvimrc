@@ -1,0 +1,30 @@
+" Use Visual Studio's global navigation instead of Vim's local jump list
+nnoremap <C-o> :vsc View.NavigateBackward<CR>
+nnoremap <C-i> :vsc View.NavigateForward<CR>
+
+" Enable relative line numbers
+set relativenumber
+
+" Also show the absolute line number for the current line (Hybrid Mode)
+set number
+
+" Go to Definition (standard 'gd')
+nnoremap gd :vsc Edit.GoToDefinition<CR>
+
+" Go to Implementation (standard 'gi')
+nnoremap gi :vsc Edit.GoToImplementation<CR>
+
+" Find All References (standard 'gr')
+nnoremap gr :vsc Edit.FindAllReferences<CR>
+	
+" Peek Definition (standard 'gp')
+nnoremap gp :vsc Edit.PeekDefinition<CR>
+
+" Rename Symbol (standard 'gR' or 're')
+nnoremap gR :vsc Refactor.Rename<CR>
+
+" --- Search Settings ---
+set incsearch    " Show matches as you type
+set hlsearch     " Highlight all matches
+set ignorecase   " Case-insensitive search
+set smartcase    " Case-sensitive if you use a capital letter

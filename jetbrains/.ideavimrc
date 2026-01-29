@@ -1,0 +1,27 @@
+" Enable relative line numbers
+set relativenumber
+
+" Also show the absolute line number for the current line (Hybrid Mode)
+set number
+
+" --- Search Settings ---
+set incsearch    " Show matches as you type
+set hlsearch     " Highlight all matches
+set ignorecase   " Case-insensitive search
+set smartcase    " Case-sensitive if you use a capital letter
+
+" Use nmap instead of nnoremap for IDE Actions
+nmap gr <Action>(RenameElement)
+
+" Sync Ctrl+O and Ctrl+I with IntelliJ's native Back/Forward
+nmap <C-o> <Action>(Back)
+nmap <C-i> <Action>(Forward)
+
+
+" --- Insert Mode Mappings ---
+
+" Use Ctrl+V to paste from system clipboard in Insert mode
+inoremap <C-v> <ESC>"+pa
+
+" Use Ctrl+C to copy current selection to system clipboard (if selection exists)
+vnoremap <C-c> "+y
